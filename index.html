@@ -1,16 +1,45 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-</head>
+<link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<style>
+table {
+  width: 90%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+col:nth-child(1) { width: 30%; }
+col:nth-child(2) { width: 25%; }
+col:nth-child(3) { width: 25%; }
+col:nth-child(4) { width: 20%; }
+td:nth-child(1) { color: #2c3e50; }
+td:nth-child(2) { color: #8e44ad; }
+td:nth-child(3) { color: #16a085; }
+  color: #c0392b;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style></head>
 <body>
-  <table id="myTable" class="display">
-    <thead>
-      <tr><th>Song Title</th><th>Artist</th><th>Genre</th><th>Tag</th></tr>
-    </thead>
-    <tbody>
+<table class="display" id="myTable">
+<colgroup>
+<col style="width: 30%;"/>
+<col style="width: 25%;"/>
+<col style="width: 25%;"/>
+<col style="width: 20%;"/>
+</colgroup>
+<thead>
+<tr><th>Song Title</th><th>Artist</th><th>Genre</th><th>Tag</th></tr>
+</thead>
+<tbody>
 <tr><td>2002</td><td>Anne Marie</td><td>Pop</td><td></td></tr>
 <tr><td>“All We Like Sheep” from The Messiah</td><td>Handel</td><td>Classical</td><td></td></tr>
 <tr><td>“Flower Duet” from Lakme</td><td>Delibes</td><td>Classical</td><td></td></tr>
@@ -47,7 +76,7 @@
 <tr><td>All I Ask of You (from “Phantom of The Opera”)</td><td>Andrew Lloyd Webber</td><td>Theatrical/Stage Music</td><td></td></tr>
 <tr><td>All I Need</td><td>Radiohead</td><td>Pop - Rock</td><td></td></tr>
 <tr><td>All I Want Is You</td><td>U2</td><td>Pop - Rock</td><td></td></tr>
-<tr><td>All My Life</td><td>KC & Jojo</td><td>Pop</td><td></td></tr>
+<tr><td>All My Life</td><td>KC &amp; Jojo</td><td>Pop</td><td></td></tr>
 <tr><td>All My Loving</td><td>The Beatles</td><td>Pop</td><td></td></tr>
 <tr><td>All Of My Love</td><td>Led Zeppelin</td><td>Pop - Rock</td><td></td></tr>
 <tr><td>All of the Lights</td><td>Kanye West</td><td>Pop</td><td></td></tr>
@@ -61,7 +90,7 @@
 <tr><td>Allelujah (from Exsultate Jubilate)</td><td>Mozart</td><td>Classical</td><td></td></tr>
 <tr><td>Alone</td><td>Heart</td><td>Pop</td><td></td></tr>
 <tr><td>Always Remember Us This Way (from “A Star is Born”)</td><td>Lady Gaga</td><td>Soundtrack/Movie Theme</td><td></td></tr>
-<tr><td>America</td><td>Simon & Garfunkel</td><td>Pop</td><td></td></tr>
+<tr><td>America</td><td>Simon &amp; Garfunkel</td><td>Pop</td><td></td></tr>
 <tr><td>America (from “West Side Story”)</td><td>Leonard Bernstein</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Amor Eterno</td><td>Juan Gabriel</td><td>Pop</td><td></td></tr>
 <tr><td>Amusement</td><td>Franco Micalizzi</td><td>Pop</td><td></td></tr>
@@ -104,7 +133,7 @@
 <tr><td>Begin the Beguine</td><td>Cole Porter</td><td>Jazz</td><td></td></tr>
 <tr><td>Besame Mucho</td><td>Carlos Jobim</td><td>Pop</td><td></td></tr>
 <tr><td>Best of Me</td><td>Anthony Hamilton</td><td>Pop</td><td></td></tr>
-<tr><td>Best Part</td><td>Daniel Caesar & H.E.R</td><td>Pop</td><td></td></tr>
+<tr><td>Best Part</td><td>Daniel Caesar &amp; H.E.R</td><td>Pop</td><td></td></tr>
 <tr><td>Better Place</td><td>Rachel Platten</td><td>Pop</td><td></td></tr>
 <tr><td>Billie Jean</td><td>Michael Jackson</td><td>Pop</td><td></td></tr>
 <tr><td>Birds Of A Feather</td><td>Billie Eilish</td><td>Pop</td><td></td></tr>
@@ -137,7 +166,7 @@
 <tr><td>Bye, Bye Baby (San Francisco Giants Fight Song)</td><td>Hugh Heller, Allyn Ferguson</td><td>Pop - Sports</td><td></td></tr>
 <tr><td>C (from “Deux Poemes de Louis Aragon”)</td><td>Poulenc</td><td>Classical</td><td></td></tr>
 <tr><td>Cadillac of the Skies (from “Empire of the Sun”)</td><td>John Williams</td><td>Soundtrack/Movie Theme</td><td></td></tr>
-<tr><td>California Dreamin'</td><td>The Mamas & the Papas</td><td>Pop</td><td></td></tr>
+<tr><td>California Dreamin'</td><td>The Mamas &amp; the Papas</td><td>Pop</td><td></td></tr>
 <tr><td>Call Me Maybe</td><td>Carly Rae Jepsen</td><td>Pop</td><td></td></tr>
 <tr><td>Can You Feel The Love Tonight (From “The Lion King”)</td><td>Elton John</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Can't Feel My Face</td><td>The Weeknd</td><td>Pop</td><td></td></tr>
@@ -177,7 +206,7 @@
 <tr><td>Concerto Alla Rustica</td><td>Vivaldi</td><td>Classical</td><td></td></tr>
 <tr><td>Conversations in the Dark</td><td>John Legend</td><td>Pop</td><td></td></tr>
 <tr><td>Coro (Water Music)</td><td>Handel</td><td>Classical</td><td></td></tr>
-<tr><td>Cosmic Love</td><td>Florence & The Machine</td><td>Pop</td><td></td></tr>
+<tr><td>Cosmic Love</td><td>Florence &amp; The Machine</td><td>Pop</td><td></td></tr>
 <tr><td>Counting Stars</td><td>One Republic</td><td>Pop</td><td></td></tr>
 <tr><td>Crash into Me</td><td>Dave Matthews Band</td><td>Pop</td><td></td></tr>
 <tr><td>Crazy</td><td>Gnarls Barkley</td><td>Pop</td><td></td></tr>
@@ -205,7 +234,7 @@
 <tr><td>Divine Romance</td><td>Phil Wickham</td><td>Pop</td><td></td></tr>
 <tr><td>Do You Realize</td><td>The Flaming Lips</td><td>Pop - Rock</td><td></td></tr>
 <tr><td>Dodi Li</td><td>Traditional Jewish</td><td>Folksong</td><td></td></tr>
-<tr><td>Dog Days Are Over</td><td>Florence & The Machine</td><td>Pop</td><td></td></tr>
+<tr><td>Dog Days Are Over</td><td>Florence &amp; The Machine</td><td>Pop</td><td></td></tr>
 <tr><td>Doin it Right</td><td>Daft Punk</td><td>Pop</td><td></td></tr>
 <tr><td>Don't Know Why</td><td>Norah Jones</td><td>Jazz</td><td></td></tr>
 <tr><td>Don't Let Me Down</td><td>The Chainsmokers</td><td>Pop</td><td></td></tr>
@@ -221,7 +250,7 @@
 <tr><td>Drowsy Maggie</td><td>Irish Tune</td><td>Folksong</td><td></td></tr>
 <tr><td>Drunk In Love</td><td>Beyonce</td><td>Pop - Romantic</td><td></td></tr>
 <tr><td>Dynamite</td><td>BTS</td><td>Pop - International</td><td></td></tr>
-<tr><td>Echame La Culpa</td><td>Luis Fonsi & Demi Lovato</td><td>Pop</td><td></td></tr>
+<tr><td>Echame La Culpa</td><td>Luis Fonsi &amp; Demi Lovato</td><td>Pop</td><td></td></tr>
 <tr><td>Edelweiss (from “The Sound of Music”)</td><td>Richard Rodgers</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Edge of Glory</td><td>Lady Gaga</td><td>Pop</td><td></td></tr>
 <tr><td>Eight Days a Week</td><td>The Beatles</td><td>Pop</td><td></td></tr>
@@ -363,7 +392,7 @@
 <tr><td>Hornpipe in D (Water Music)</td><td>Handel</td><td>Classical</td><td></td></tr>
 <tr><td>Hornpipe in F (Water Music)</td><td>Handel</td><td>Classical</td><td></td></tr>
 <tr><td>How Deep Is Your Love</td><td>Bee Gees</td><td>Pop - Romantic</td><td></td></tr>
-<tr><td>How Deep Is Your Love</td><td>Calvin Harris & Disciples</td><td>Pop - Romantic</td><td></td></tr>
+<tr><td>How Deep Is Your Love</td><td>Calvin Harris &amp; Disciples</td><td>Pop - Romantic</td><td></td></tr>
 <tr><td>How Far I'll Go (from “Moana”)</td><td>Lin-Manuel Miranda</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>How Great Is Our God</td><td>Chris Tomlin</td><td>Hymn/Worship</td><td></td></tr>
 <tr><td>How Great Thou Art</td><td>Christian Hymn</td><td>Hymn/Worship</td><td></td></tr>
@@ -406,7 +435,7 @@
 <tr><td>If I Ain't Got You</td><td>Alicia Keys</td><td>Pop</td><td></td></tr>
 <tr><td>If I Had Words</td><td>John Hodge</td><td>Pop</td><td></td></tr>
 <tr><td>If I Had Words</td><td>Scott Fitzgerald</td><td>Pop</td><td></td></tr>
-<tr><td>Ikaw At Ako (from “Hello, Love, Goodbye” OST)</td><td>Moira & Jason</td><td>Soundtrack/Movie Theme</td><td></td></tr>
+<tr><td>Ikaw At Ako (from “Hello, Love, Goodbye” OST)</td><td>Moira &amp; Jason</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Im Eshkachech (E minor)</td><td>Jewish Traditional</td><td>Folksong</td><td></td></tr>
 <tr><td>Imagine</td><td>John Lennon</td><td>Pop</td><td></td></tr>
 <tr><td>Imperial March (from “Star Wars: The Empire Strikes Back”)</td><td>John Williams</td><td>Soundtrack/Movie Theme</td><td></td></tr>
@@ -489,7 +518,7 @@
 <tr><td>Linger</td><td>The Cranberries</td><td>Pop - Rock</td><td></td></tr>
 <tr><td>Livin' On A Prayer</td><td>Bon Jovi</td><td>Pop - Rock</td><td></td></tr>
 <tr><td>Locked Out of Heaven</td><td>Bruno Mars</td><td>Pop</td><td></td></tr>
-<tr><td>Long Live Cowgirls</td><td>Ian Munsick & Cody Johnson</td><td>Pop - Country</td><td></td></tr>
+<tr><td>Long Live Cowgirls</td><td>Ian Munsick &amp; Cody Johnson</td><td>Pop - Country</td><td></td></tr>
 <tr><td>Lord of the Rings Medley (from “The Lord of the Rings”)</td><td>Howard Shore</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Lord of the Rings Medley (Tone Poem)</td><td>Howard Shore</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Lost Woods (from Legend of Zelda)</td><td>Koji Kondo</td><td>Soundtrack/Movie Theme</td><td></td></tr>
@@ -503,7 +532,7 @@
 <tr><td>Love on the Brain</td><td>Rihanna</td><td>Pop - Romantic</td><td></td></tr>
 <tr><td>Love Story</td><td>Taylor Swift</td><td>Pop - Romantic</td><td></td></tr>
 <tr><td>Love Theme (from “The Godfather”)</td><td>Nino Rota</td><td>Soundtrack/Movie Theme</td><td></td></tr>
-<tr><td>Love Will Keep Us Together</td><td>Captain & Tennille</td><td>Pop - Romantic</td><td></td></tr>
+<tr><td>Love Will Keep Us Together</td><td>Captain &amp; Tennille</td><td>Pop - Romantic</td><td></td></tr>
 <tr><td>Love You Like a Love Song</td><td>Selena Gomez</td><td>Pop - Romantic</td><td></td></tr>
 <tr><td>Love Yourself</td><td>Justin Bieber</td><td>Pop</td><td></td></tr>
 <tr><td>Lovely</td><td>Billie Eilish and Khalid</td><td>Pop - Romantic</td><td></td></tr>
@@ -531,7 +560,7 @@
 <tr><td>Merry Christmas, Mr. Lawrence (from “Merry Christmas, Mr. Lawrence”)</td><td>Ryuichi Sakamoto</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Merry Widow Waltzes</td><td>Franz Lehar</td><td>Classical</td><td></td></tr>
 <tr><td>Merry-Go-Round of Life (from “Howl's Moving Castle”)</td><td>Joe Hisaishi</td><td>Soundtrack/Movie Theme</td><td></td></tr>
-<tr><td>Mi Adir & Mi Bon Siach</td><td>Jewish Traditional</td><td>Folksong</td><td></td></tr>
+<tr><td>Mi Adir &amp; Mi Bon Siach</td><td>Jewish Traditional</td><td>Folksong</td><td></td></tr>
 <tr><td>Michelle</td><td>The Beatles</td><td>Pop</td><td></td></tr>
 <tr><td>Minor Swing</td><td>Django Reinhardt</td><td>Jazz</td><td></td></tr>
 <tr><td>Minuet and Trio</td><td>Boccherini</td><td>Classical</td><td></td></tr>
@@ -560,13 +589,13 @@
 <tr><td>Mystery of Love (from “Call Me By Your Name”)</td><td>Sufjan Stevens</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Never Ending Story (from “The Never Ending Story”)</td><td>Limahl</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Never Gonna Give You Up</td><td>Rick Astley</td><td>Pop</td><td></td></tr>
-<tr><td>Never Let Me Go</td><td>Florence & The Machine</td><td>Pop</td><td></td></tr>
+<tr><td>Never Let Me Go</td><td>Florence &amp; The Machine</td><td>Pop</td><td></td></tr>
 <tr><td>Never Tear Us Apart</td><td>INXS</td><td>Pop</td><td></td></tr>
 <tr><td>New Romantics</td><td>Taylor Swift</td><td>Pop</td><td></td></tr>
 <tr><td>New Soul</td><td>Yael Naim</td><td>Pop</td><td></td></tr>
 <tr><td>New Year's Day</td><td>Taylor Swift</td><td>Pop</td><td></td></tr>
 <tr><td>Next To Me</td><td>Emeli Sande</td><td>Pop</td><td></td></tr>
-<tr><td>Night & Day</td><td>Cole Porter</td><td>Jazz</td><td></td></tr>
+<tr><td>Night &amp; Day</td><td>Cole Porter</td><td>Jazz</td><td></td></tr>
 <tr><td>Night on the Bare Mountain</td><td>Modest Mussorgsky</td><td>Classical</td><td></td></tr>
 <tr><td>No Ordinary Love</td><td>Sade</td><td>Pop - Romantic</td><td></td></tr>
 <tr><td>Nobody But You (with Gwen Stefani)</td><td>Blake Shelton</td><td>Pop</td><td></td></tr>
@@ -587,14 +616,14 @@
 <tr><td>O Praise the Name (Easter)</td><td>Christian Worship</td><td>Hymn/Worship</td><td></td></tr>
 <tr><td>O Sole Mio</td><td>Eduardo Di Capua</td><td>Classical</td><td></td></tr>
 <tr><td>O Tannenbaum (from “A Charlie Brown Christmas”)</td><td>Christmas Traditional</td><td>Holiday</td><td></td></tr>
-<tr><td>Oceanic Museum (from "Pokémon Ruby & Sapphire”)</td><td>The Zame</td><td>Soundtrack/Movie Theme</td><td></td></tr>
+<tr><td>Oceanic Museum (from "Pokémon Ruby &amp; Sapphire”)</td><td>The Zame</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Oceans (Where Feet May Fail)</td><td>Hillsong United</td><td>Hymn/Worship</td><td></td></tr>
 <tr><td>Od Y'shama</td><td>Jewish Traditional</td><td>Folksong</td><td></td></tr>
 <tr><td>Od Yishma II</td><td>Jewish Traditional</td><td>Folksong</td><td></td></tr>
 <tr><td>Ode to Joy</td><td>Beethoven</td><td>Classical</td><td></td></tr>
 <tr><td>On The Street Where You Live (from “My Fair Lady”)</td><td>Frederick Loewe</td><td>Theatrical/Stage Music</td><td></td></tr>
 <tr><td>On Top of the World</td><td>Imagine Dragons</td><td>Pop</td><td></td></tr>
-<tr><td>One Dance (ft. Wizkid & Kyla)</td><td>Drake</td><td>Pop</td><td></td></tr>
+<tr><td>One Dance (ft. Wizkid &amp; Kyla)</td><td>Drake</td><td>Pop</td><td></td></tr>
 <tr><td>One Day</td><td>Matisyahu</td><td>Pop</td><td></td></tr>
 <tr><td>One Day More (from “Les Miserables”)</td><td>Les Miserables Cast</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>One Hand, One Heart (from “West Side Story”)</td><td>Leonard Bernstein</td><td>Soundtrack/Movie Theme</td><td></td></tr>
@@ -717,7 +746,7 @@
 <tr><td>Smells Like Teen Spirit</td><td>Nirvana</td><td>Pop - Rock</td><td></td></tr>
 <tr><td>Smooth Criminal</td><td>Michael Jackson</td><td>Pop</td><td></td></tr>
 <tr><td>So Are You To Me</td><td>Peter Bradley Adams</td><td>Pop</td><td></td></tr>
-<tr><td>So This is Love (from “Cinderella”)</td><td>Ilene Woods & Mike Douglas</td><td>Soundtrack/Movie Theme</td><td></td></tr>
+<tr><td>So This is Love (from “Cinderella”)</td><td>Ilene Woods &amp; Mike Douglas</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Some Nights</td><td>Fun</td><td>Pop</td><td></td></tr>
 <tr><td>Somebody That I Used to Know</td><td>Gotye</td><td>Pop</td><td></td></tr>
 <tr><td>Somebody to Love</td><td>Queen</td><td>Pop - Rock</td><td></td></tr>
@@ -725,7 +754,7 @@
 <tr><td>Someone Like You</td><td>Adele</td><td>Pop</td><td></td></tr>
 <tr><td>Someone to Watch Over Me</td><td>Gershwin</td><td>Jazz</td><td></td></tr>
 <tr><td>Somersault</td><td>Zero 7</td><td>Pop - Indie/Alternative</td><td></td></tr>
-<tr><td>Something Just Like This</td><td>The Chainsmokers & Coldplay</td><td>Pop</td><td></td></tr>
+<tr><td>Something Just Like This</td><td>The Chainsmokers &amp; Coldplay</td><td>Pop</td><td></td></tr>
 <tr><td>Somewhere (from “West Side Story”)</td><td>Leonard Bernstein</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Somewhere in Time (from “Somewhere in Time”)</td><td>John Barry</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Somewhere Only We Know</td><td>Keane</td><td>Pop</td><td></td></tr>
@@ -779,7 +808,7 @@
 <tr><td>Such Great Heights</td><td>The Postal Service</td><td>Pop</td><td></td></tr>
 <tr><td>Sugar We're Going Down</td><td>Fall Out Boy</td><td>Pop - Rock</td><td></td></tr>
 <tr><td>Summertime Sadness</td><td>Lana Del Rey</td><td>Pop</td><td></td></tr>
-<tr><td>Sunflower (from “Spider-Man: Into the Spider-Verse”)</td><td>Post Malone & Swae Lee</td><td>Soundtrack/Movie Theme</td><td></td></tr>
+<tr><td>Sunflower (from “Spider-Man: Into the Spider-Verse”)</td><td>Post Malone &amp; Swae Lee</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Sunrise, Sunset (from “Fiddler on the Roof”)</td><td>Jerry Bock</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Super Mario Bros. Theme</td><td>Koji Kondo</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Superstition</td><td>Stevie Wonder</td><td>Pop</td><td></td></tr>
@@ -805,11 +834,11 @@
 <tr><td>Tennessee Whiskey</td><td>Chris Stapleton</td><td>Pop - Country</td><td></td></tr>
 <tr><td>Thank U, Next (from “Bridgerton”)</td><td>Ariana Grande</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>That's Amore</td><td>Harry Warren</td><td>Pop</td><td></td></tr>
-<tr><td>The 59th Street Bridge Song (Feelin’ Groovy)</td><td>Simon & Garfunkel</td><td>Pop</td><td></td></tr>
+<tr><td>The 59th Street Bridge Song (Feelin’ Groovy)</td><td>Simon &amp; Garfunkel</td><td>Pop</td><td></td></tr>
 <tr><td>The Bare Necessities (from “The Jungle Book”)</td><td>Terry Gilkyson</td><td>Soundtrack/Movie Theme</td><td></td></tr>
-<tr><td>The Blessing (ft. Kari Jobe & Cody Carnes)</td><td>Elevation Worship</td><td>Hymn/Worship</td><td></td></tr>
+<tr><td>The Blessing (ft. Kari Jobe &amp; Cody Carnes)</td><td>Elevation Worship</td><td>Hymn/Worship</td><td></td></tr>
 <tr><td>The Book Of Love</td><td>Peter Gabriel</td><td>Pop - Romantic</td><td></td></tr>
-<tr><td>The Breaking of the Fellowship (from “Lord of the Rings”)</td><td>Howard Shore & Frances Walsh</td><td>Soundtrack/Movie Theme</td><td></td></tr>
+<tr><td>The Breaking of the Fellowship (from “Lord of the Rings”)</td><td>Howard Shore &amp; Frances Walsh</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>The Dress Looks Nice On You</td><td>Sufjan Stevens</td><td>Pop - Indie/Alternative</td><td></td></tr>
 <tr><td>The Ecstasy of Gold (from “The Good, The Bad and The Ugly”)</td><td>Ennio Morricone</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>The Fox</td><td>Ylvis</td><td>Pop</td><td></td></tr>
@@ -859,7 +888,7 @@
 <tr><td>This Must Be the Place (Naive Melody)</td><td>Talking Heads</td><td>Pop - Rock</td><td></td></tr>
 <tr><td>This Year's Love</td><td>David Gray</td><td>Pop - Romantic</td><td></td></tr>
 <tr><td>Thou Ring on my Finger</td><td>Schumann</td><td>Classical</td><td></td></tr>
-<tr><td>Three Little Maids (from “The Mikado”)</td><td>Gilbert&Sullivan</td><td>Theatrical/Stage Music</td><td></td></tr>
+<tr><td>Three Little Maids (from “The Mikado”)</td><td>Gilbert&amp;Sullivan</td><td>Theatrical/Stage Music</td><td></td></tr>
 <tr><td>Thriller</td><td>Michael Jackson</td><td>Pop</td><td></td></tr>
 <tr><td>Through The Eyes of Love (from “Ice Castles”)</td><td>Marvin Hamlisch</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Thunder Road</td><td>Cowboy Junkies</td><td>Pop</td><td></td></tr>
@@ -882,7 +911,7 @@
 <tr><td>Tupelo Honey</td><td>Van Morrison</td><td>Pop</td><td></td></tr>
 <tr><td>Turning Page (from “Twilight”)</td><td>Sleeping At Last</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Two Of Us On The Run</td><td>Lucius</td><td>Pop</td><td></td></tr>
-<tr><td>Two Rondeaux (from “Abdelazar & The Fairy Queen”)</td><td>Purcell</td><td>Classical</td><td></td></tr>
+<tr><td>Two Rondeaux (from “Abdelazar &amp; The Fairy Queen”)</td><td>Purcell</td><td>Classical</td><td></td></tr>
 <tr><td>Two Worlds</td><td>Lea Salonga</td><td>Pop</td><td></td></tr>
 <tr><td>Umbrella</td><td>Rihanna</td><td>Pop</td><td></td></tr>
 <tr><td>Unchained Melody (from “Unchained”)</td><td>Alex North</td><td>Soundtrack/Movie Theme</td><td></td></tr>
@@ -954,7 +983,7 @@
 <tr><td>Yellow</td><td>Coldplay</td><td>Pop</td><td></td></tr>
 <tr><td>Yesterday</td><td>The Beatles</td><td>Pop</td><td></td></tr>
 <tr><td>YMCA</td><td>Village People</td><td>Pop</td><td></td></tr>
-<tr><td>You & Me</td><td>Dave Matthews Band</td><td>Pop</td><td></td></tr>
+<tr><td>You &amp; Me</td><td>Dave Matthews Band</td><td>Pop</td><td></td></tr>
 <tr><td>You And I</td><td>Ingrid Michaelson</td><td>Pop</td><td></td></tr>
 <tr><td>You And Me</td><td>Lifehouse</td><td>Pop</td><td></td></tr>
 <tr><td>You Are My Sunshine</td><td>Jimmy Davis</td><td>Pop</td><td></td></tr>
@@ -980,66 +1009,65 @@
 <tr><td>Your Song</td><td>Elton John</td><td>Pop</td><td></td></tr>
 <tr><td>Zelda's Lullaby (from “The Legend of Zelda”)</td><td>Smooth McGroove</td><td>Soundtrack/Movie Theme</td><td></td></tr>
 <tr><td>Zombie</td><td>The Cranberries</td><td>Pop - Rock</td><td></td></tr>
-        <tr><td>Best Day Of My Life</td><td>American Authors</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Brown Eyed Girl</td><td>Van Morrison</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Can't Stop the Feeling</td><td>Justin Timberlake</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Crazy Little Thing Called Love</td><td>Queen</td><td>Pop - Rock</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Dancing Queen</td><td>ABBA</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Don't Stop Believing</td><td>Journey</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Happy</td><td>Pharrell Williams</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>I Gotta Feeling</td><td>Black Eyed Peas</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Just the Way You Are</td><td>Bruno Mars</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Love on Top</td><td>Beyonce</td><td>Pop - Romantic</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>September</td><td>Earth, Wind & Fire</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Shut Up and Dance</td><td>Walk The Moon</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Signed, Sealed, Delivered</td><td>Stevie Wonder</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Sugar</td><td>Maroon 5</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Sweet Caroline</td><td>Neil Diamond</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>The Way You Look Tonight</td><td>Frank Sinatra</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>This Will Be (An Everlasting Love)</td><td>Natalie Cole</td><td>Pop - Romantic</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>Uptown Funk (ft. Bruno Mars)</td><td>Mark Ronson</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>You Make My Dreams</td><td>Hall & Oates</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
-        <tr><td>A Thousand Years</td><td>Christina Perri</td><td>Pop - Romantic</td><td>Popular wedding tunes</td></tr>
-        <tr><td>All of Me</td><td>John Legend</td><td>Pop</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Amo Soltanto Te</td><td>Andrea Bocelli</td><td>Pop</td><td>Popular wedding tunes</td></tr>
-        <tr><td>At Last</td><td>Etta James</td><td>Pop</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Ave Maria</td><td>Schubert</td><td>Classical</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Canon in D</td><td>Pachelbel</td><td>Classical</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Clair de Lune (Naughtin)</td><td>Debussy</td><td>Classical</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Hallelujah</td><td>Leonard Cohen</td><td>Pop</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Jesu, Joy of Man's Desiring</td><td>Bach</td><td>Classical</td><td>Popular wedding tunes</td></tr>
-        <tr><td>La Vie En Rose</td><td>Edith Piaf</td><td>Jazz</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Marry You</td><td>Bruno Mars</td><td>Pop - Romantic</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Perfect</td><td>Ed Sheeran</td><td>Pop</td><td>Popular wedding tunes</td></tr>
-        <tr><td>River Flows In You</td><td>Yiruma</td><td>Pop - New Age/Medley</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Sheep May Safely Graze</td><td>Bach</td><td>Classical</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Take My Hand (The Wedding Song)</td><td>Emily Hackett</td><td>Pop - Romantic</td><td>Popular wedding tunes</td></tr>
-        <tr><td>The Prayer (from “Quest For Camelot”)</td><td>Celine Dion</td><td>Soundtrack/Movie Theme</td><td>Popular wedding tunes</td></tr>
-        <tr><td>The Swan</td><td>Saint-Saëns</td><td>Classical</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Wedding March (short vers.)</td><td>Wagner</td><td>Classical</td><td>Popular wedding tunes</td></tr>
-        <tr><td>When I Fall In Love</td><td>Nat King Cole</td><td>Pop - Romantic</td><td>Popular wedding tunes</td></tr>
-        <tr><td>Adagio for Strings</td><td>Barber (arr. by Naughtin)</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Amazing Grace</td><td>Traditional Hymn</td><td>Hymn/Worship</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Arioso</td><td>Bach</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Ave Maria</td><td>Schubert</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Be Thou My Vision</td><td>Irish Traditional</td><td>Folksong</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Clair de Lune (Naughtin)</td><td>Debussy</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Hallelujah</td><td>Leonard Cohen</td><td>Pop</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>In the Garden</td><td>C. Austin Miles</td><td>Hymn/Worship</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Nimrod (Enigma Variations)</td><td>Elgar</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>On The Nature of Daylight</td><td>Max Richter</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Panis Angelicus</td><td>Franck</td><td>Pop - New Age/Medley</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Pie Jesu (Requiem)</td><td>Faure</td><td>Hymn/Worship</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Tears in Heaven</td><td>Eric Clapton</td><td>Pop</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>The Lord Bless You And Keep You</td><td>Peter Lutkin</td><td>Hymn/Worship</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>The Rose</td><td>Bette Midler</td><td>Pop</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Traumerei</td><td>Schumann</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>Wind Beneath My Wings</td><td>Better Middler (rearranged by A. Zamora)</td><td>Pop</td><td>Tribute and Memorial selections</td></tr>
-        <tr><td>You Raise Me Up</td><td>Josh Groban</td><td>Pop</td><td>Tribute and Memorial selections</td></tr>
-    </tbody>
-  </table>
-
-  <script>
+<tr><td>Best Day Of My Life</td><td>American Authors</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Brown Eyed Girl</td><td>Van Morrison</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Can't Stop the Feeling</td><td>Justin Timberlake</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Crazy Little Thing Called Love</td><td>Queen</td><td>Pop - Rock</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Dancing Queen</td><td>ABBA</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Don't Stop Believing</td><td>Journey</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Happy</td><td>Pharrell Williams</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>I Gotta Feeling</td><td>Black Eyed Peas</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Just the Way You Are</td><td>Bruno Mars</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Love on Top</td><td>Beyonce</td><td>Pop - Romantic</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>September</td><td>Earth, Wind &amp; Fire</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Shut Up and Dance</td><td>Walk The Moon</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Signed, Sealed, Delivered</td><td>Stevie Wonder</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Sugar</td><td>Maroon 5</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Sweet Caroline</td><td>Neil Diamond</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>The Way You Look Tonight</td><td>Frank Sinatra</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>This Will Be (An Everlasting Love)</td><td>Natalie Cole</td><td>Pop - Romantic</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>Uptown Funk (ft. Bruno Mars)</td><td>Mark Ronson</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>You Make My Dreams</td><td>Hall &amp; Oates</td><td>Pop</td><td>Celebration/Reception Favorites</td></tr>
+<tr><td>A Thousand Years</td><td>Christina Perri</td><td>Pop - Romantic</td><td>Popular wedding tunes</td></tr>
+<tr><td>All of Me</td><td>John Legend</td><td>Pop</td><td>Popular wedding tunes</td></tr>
+<tr><td>Amo Soltanto Te</td><td>Andrea Bocelli</td><td>Pop</td><td>Popular wedding tunes</td></tr>
+<tr><td>At Last</td><td>Etta James</td><td>Pop</td><td>Popular wedding tunes</td></tr>
+<tr><td>Ave Maria</td><td>Schubert</td><td>Classical</td><td>Popular wedding tunes</td></tr>
+<tr><td>Canon in D</td><td>Pachelbel</td><td>Classical</td><td>Popular wedding tunes</td></tr>
+<tr><td>Clair de Lune (Naughtin)</td><td>Debussy</td><td>Classical</td><td>Popular wedding tunes</td></tr>
+<tr><td>Hallelujah</td><td>Leonard Cohen</td><td>Pop</td><td>Popular wedding tunes</td></tr>
+<tr><td>Jesu, Joy of Man's Desiring</td><td>Bach</td><td>Classical</td><td>Popular wedding tunes</td></tr>
+<tr><td>La Vie En Rose</td><td>Edith Piaf</td><td>Jazz</td><td>Popular wedding tunes</td></tr>
+<tr><td>Marry You</td><td>Bruno Mars</td><td>Pop - Romantic</td><td>Popular wedding tunes</td></tr>
+<tr><td>Perfect</td><td>Ed Sheeran</td><td>Pop</td><td>Popular wedding tunes</td></tr>
+<tr><td>River Flows In You</td><td>Yiruma</td><td>Pop - New Age/Medley</td><td>Popular wedding tunes</td></tr>
+<tr><td>Sheep May Safely Graze</td><td>Bach</td><td>Classical</td><td>Popular wedding tunes</td></tr>
+<tr><td>Take My Hand (The Wedding Song)</td><td>Emily Hackett</td><td>Pop - Romantic</td><td>Popular wedding tunes</td></tr>
+<tr><td>The Prayer (from “Quest For Camelot”)</td><td>Celine Dion</td><td>Soundtrack/Movie Theme</td><td>Popular wedding tunes</td></tr>
+<tr><td>The Swan</td><td>Saint-Saëns</td><td>Classical</td><td>Popular wedding tunes</td></tr>
+<tr><td>Wedding March (short vers.)</td><td>Wagner</td><td>Classical</td><td>Popular wedding tunes</td></tr>
+<tr><td>When I Fall In Love</td><td>Nat King Cole</td><td>Pop - Romantic</td><td>Popular wedding tunes</td></tr>
+<tr><td>Adagio for Strings</td><td>Barber (arr. by Naughtin)</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Amazing Grace</td><td>Traditional Hymn</td><td>Hymn/Worship</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Arioso</td><td>Bach</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Ave Maria</td><td>Schubert</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Be Thou My Vision</td><td>Irish Traditional</td><td>Folksong</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Clair de Lune (Naughtin)</td><td>Debussy</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Hallelujah</td><td>Leonard Cohen</td><td>Pop</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>In the Garden</td><td>C. Austin Miles</td><td>Hymn/Worship</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Nimrod (Enigma Variations)</td><td>Elgar</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>On The Nature of Daylight</td><td>Max Richter</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Panis Angelicus</td><td>Franck</td><td>Pop - New Age/Medley</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Pie Jesu (Requiem)</td><td>Faure</td><td>Hymn/Worship</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Tears in Heaven</td><td>Eric Clapton</td><td>Pop</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>The Lord Bless You And Keep You</td><td>Peter Lutkin</td><td>Hymn/Worship</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>The Rose</td><td>Bette Midler</td><td>Pop</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Traumerei</td><td>Schumann</td><td>Classical</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>Wind Beneath My Wings</td><td>Better Middler (rearranged by A. Zamora)</td><td>Pop</td><td>Tribute and Memorial selections</td></tr>
+<tr><td>You Raise Me Up</td><td>Josh Groban</td><td>Pop</td><td>Tribute and Memorial selection</td></tr>
+</tbody>
+</table>
+<script>
     $(document).ready(function () {
       $('#myTable').DataTable();
     });
