@@ -16,19 +16,30 @@ th, td {
   text-align: left;
   border: 1px solid #ccc;
 }
-col:nth-child(1) { width: 30%; }
-col:nth-child(2) { width: 25%; }
-col:nth-child(3) { width: 25%; }
+col:nth-child(1) { width: 50%; }
+col:nth-child(2) { width: 15%; }
+col:nth-child(3) { width: 15%; }
 col:nth-child(4) { width: 20%; }
 td:nth-child(1) { color: #2c3e50; }
-td:nth-child(2) { color: #8e44ad; }
-td:nth-child(3) { color: #16a085; }
-  color: #c0392b;
+td:nth-child(2) { color: #2c3e50; }
+td:nth-child(3) { color: #2c3e50; }
+  color: #2c3e50;
   text-decoration: none;
   font-weight: bold;
 }
 </style></head>
 <body>
+<div class="filter-container">
+<select id="filter-artist">
+<option value="">Select Artist</option>
+</select>
+<select id="filter-genre">
+<option value="">Select Genre</option>
+</select>
+<select id="filter-tag">
+<option value="">Select Tag</option>
+</select>
+</div>
 <table class="display" id="myTable">
 <colgroup>
 <col style="width: 30%;"/>
@@ -1072,5 +1083,42 @@ td:nth-child(3) { color: #16a085; }
       $('#myTable').DataTable();
     });
   </script>
+<script>
+$(document).ready(function () {
+    var table = $('#myTable').DataTable();
+    // Populate dropdowns with unique values
+    var artistSet = new Set();
+    var genreSet = new Set();
+    var tagSet = new Set();
+    table.rows().data().unique().sort().each(function (value) {
+        artistSet.add(value[1]);
+        genreSet.add(value[2]);
+        tagSet.add(value[3]);
+    });
+    // Sort the sets alphabetically
+    var sortedArtists = Array.from(artistSet).sort();
+    var sortedGenres = Array.from(genreSet).sort();
+    var sortedTags = Array.from(tagSet).sort();
+    sortedArtists.forEach(function (artist) {
+        $('#filter-artist').append('<option value="' + artist + '">' + artist + '</option>');
+    });
+    sortedGenres.forEach(function (genre) {
+        $('#filter-genre').append('<option value="' + genre + '">' + genre + '</option>');
+    });
+    sortedTags.forEach(function (tag) {
+        $('#filter-tag').append('<option value="' + tag + '">' + tag + '</option>');
+    });
+    // Filter table based on dropdown selection
+    $('#filter-artist').on('change', function () {
+        table.column(1).search(this.value).draw();
+    });
+    $('#filter-genre').on('change', function () {
+        table.column(2).search(this.value).draw();
+    });
+    $('#filter-tag').on('change', function () {
+        table.column(3).search(this.value).draw();
+    });
+});
+</script>
 </body>
 </html>
