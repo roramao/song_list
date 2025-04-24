@@ -60,6 +60,7 @@ td:nth-child(3) {
 }
 td:nth-child(4) {
  color: #2c3e50;
+ border: 2px solid #4CAF50; /* Make borders more obvious */
 }
 .search-container {
  margin-bottom: 20px;
@@ -89,7 +90,7 @@ input[type="text"] {
 </head>
 <body>
 <div class="filter-container">
- <input type="search" id="search-title" placeholder="Search for a song ...">
+ <input type="search" id="search-title" placeholder="Search by Song Title">
  <select id="filter-artist">
  <option value="">Select Artist</option>
  </select>
@@ -139,7 +140,7 @@ input[type="text"] {
 $(document).ready(function () {
  var table = $('#myTable').DataTable({
  paging: true,
- searching: false,
+ searching: true,
  ordering: true,
  info: true
  });
