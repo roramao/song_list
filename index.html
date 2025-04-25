@@ -1154,12 +1154,14 @@ input[type="text"] {
 </tbody>
 </table>
 <script>
+
 $(document).ready(function () {
  var table = $('#myTable').DataTable({
  paging: true,
  searching: true,
  ordering: true,
- info: true
+ info: true,
+ "dom": 'lrtip'
  });
  // Populate dropdowns with unique values
  var artistSet = new Set();
